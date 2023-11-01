@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 import { GlobalStyle } from "../GlobalStyle"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
+import Error from "./pages/Error"
 import Home from "./pages/Home"
 import Service from "./pages/Service"
 
@@ -40,7 +42,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/service" element={<Service />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
 
